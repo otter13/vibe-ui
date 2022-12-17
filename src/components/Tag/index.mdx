@@ -1,0 +1,42 @@
+---
+name: Tag
+route: /Tag
+order: 7
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Tag from './index'
+
+# Tag tag
+
+#### Basic use
+<Playground>
+    <Tag color="#06c">Label</Tag>
+    <Tag color="red">Label</Tag>
+    <Tag color="orange">Label</Tag>
+    <Tag >Label</Tag><br />
+    <Tag color="green" closable>Label</Tag>
+    <Tag closable>Label</Tag>
+</Playground>
+
+#### The callback when closed
+<Playground>
+    <Tag color="green" closable onClose={() => {alert('tag closed')}}>标签</Tag>
+</Playground>
+
+## use
+
+``` js
+import { Tag } from '@otter13/vibe-ui'
+
+// Import
+<Tag />
+```
+
+## API documentation
+|  parameter  |  illustrate  |  type  |  Defaults  |
+|  ---   |  ---  |  ---  |  ---  |
+|  closable  |  Whether it can be closed  |  bool  |  false  |
+|  onClose  |  The callback when the label is closed  |  func  |   |
+|  color  |  Colors of label,No setting is the default color  |  string  |  '#fafafa'  |
