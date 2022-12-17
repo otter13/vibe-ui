@@ -1,0 +1,68 @@
+---
+name: Badge
+route: /Badge
+order: 5
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Badge from './index'
+
+# Badge logo number component
+
+#### Default usage
+<Playground>
+    <Badge count={99}>react</Badge>
+</Playground>
+
+#### Set overflowCount to show the cap
+<Playground>
+    <Badge count={129} overflowCount={99}>react+vue</Badge>
+</Playground>
+
+#### Set overflowCount to show the cap
+<Playground>
+    <Badge count={129} overflowCount={99}>react+vue</Badge><span style={{marginLeft:"60px"}}></span>
+    <Badge count={129} overflowCount={99} style={{backgroundColor: 'green'}}>Node</Badge>
+</Playground>
+
+#### Just show one small dot
+<Playground>
+    <Badge count={1} dot>javascript</Badge>
+</Playground>
+
+#### Display indicator status
+<Playground>
+    <Badge status="success"></Badge>
+    <Badge status="warning"></Badge>
+    <Badge status="error"></Badge>
+    <Badge status="processing"></Badge>
+    <br /><br />
+    <Badge status="success" text="success"></Badge><br />
+    <Badge status="error" text="mistake"></Badge><br />
+    <Badge status="processing" text="in progress"></Badge><br />
+    <Badge status="warning" text="warn"></Badge>
+</Playground>
+
+## usage
+
+``` js
+import { Badge } from '@otter13/vibe-ui'
+
+// Import
+<Badge />
+```
+
+
+## API documentation
+|  parameter  |  illustrate  |  Types of  |  Defaults  |
+|  ---   |  ---  |  ---  |  ---  |
+|  style |  Change the Badge style  |  object  |  |
+|  color |  Custom small dot color  |  string  |  'red'  |
+|  count |  Display number  |  number  |  0  |
+|  dot |  Do not display numbers,Just show one small dot  |  bool  |  false  |
+|  offset |  Set the offset of the status point  |  array  |    |
+|  overflowCount |  Display the number of cap  |  number  |    |
+|  showZero |  Whether the value is 0 when the value is 0  |  bool  |  false  |
+|  status |  Set Badge as the status point, The type has success|warning|error|default|processing  |  string  |  'default'  |
+|  text |  Text of the state  |  string  |    |
