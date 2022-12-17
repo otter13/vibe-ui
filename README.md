@@ -27,7 +27,10 @@ yarn add @otter13/vide-u
 ## 2. Example
 ``` jsx
 import { 
-  Button
+  Button,
+  Empty,
+  Badge,
+  Alert
 } from '@otter13/vide-ui'
 import { useState } from 'react'
 import styles from './index.css'
@@ -46,6 +49,15 @@ export default function() {
       <Button className={styles.btn} type="primary" shape="circle">circle</Button>
       <Button className={styles.mb16} type="primary" block>primary&block</Button>
       <Button type="warning" shape="circle" block onClick={show}>circle&block</Button>
+      <Badge text="ddd" status="warning">6666ngd</Badge>
+      <div className={styles.mb16}></div>
+      <Alert message="success tip" />
+      <Alert message="success tip" type="success" />
+      <Alert message="success tip" type="error" />
+      <Alert message="success tip" type="info" />
+      <Alert message="success tip" type="info" closable />
+      <Alert message="success tip" description="skfjdsalajdfjadkfjaldfhjaskdn aloha" closable type="success" />
+      <Empty />
     </div>
   )
 }
