@@ -34,6 +34,9 @@
     "type": "git",
     "url": "git+https://github.com/otter13/vibe-ui.git"
   },
+  "publishConfig": {
+    "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
+  },
   "contributors": [
     "JL"
   ],
