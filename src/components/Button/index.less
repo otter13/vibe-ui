@@ -8,7 +8,7 @@
   color: #fff;
   font-family: inherit;
   background-color: #000;
-  user-select:none;   // 禁止用户选中
+  user-select:none;   // Forbidden users to choose
   cursor: pointer;
   text-align: center;
   &.primary {
@@ -29,12 +29,12 @@
     }
   }
 
-  // 形状
+  // shape
   &.circle {
     border-radius: 1.5em;
   }
 
-  // 适应其父元素
+  // Adapt to its father elements
   &.block {
     // width: 100%;
     display: block;
@@ -63,7 +63,7 @@
   &:active::after {
     transform: scale(0, 0);
     opacity: .3;
-    //设置初始状态
+    //Set the initial state
     transition: 0s;
   }
 }
