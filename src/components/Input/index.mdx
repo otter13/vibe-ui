@@ -1,0 +1,53 @@
+---
+name: Input
+route: /input
+order: 9
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Icon from '../Icon'
+import Input from './index'
+
+## Input
+
+<Playground>
+    <Input /><br />
+    <Input style={{width: '400px', marginTop: '16px', marginBottom: '16px'}} /><br />
+    <Input style={{borderRadius: '4px'}} />
+</Playground>
+
+## Input with icon (search)
+
+<Playground>
+    <Input icon={<Icon type='FaSistrix' />} onIconClick={(v) => {alert(`Input: ${v}`)}} />
+</Playground>
+
+## Automatic focus
+<Playground>
+    <Input autoFocus />
+</Playground>
+
+## Basic usage
+
+``` js
+import { Input } from '@otter13/vibe-ui'
+
+// Import
+<Input />
+```
+
+## API documentation
+|  parameter  |  illustrate  |  Types of  |  Defaults  |
+|  ---   |  ---  |  ---  |  ---  |
+|  icon  |  Whether to bring icon  |  ReactNode |  |
+|  defaultValue  |  Input box default content  |  string |  |
+|  id  |  Input box ID  |  string |  |
+|  className  |  The class name of the input box  |  string |  |
+|  style  |  The style of the input box  |  object |  |
+|  placeholder  |  Input box occupied symbols  |  string |  |
+|  type  |  Input box type  |  string |  |
+|  autoFocus  |  Whether the input box automatically focuses  |  bool |  |
+|  value  |  The value of the input box  |  string |  |
+|  onChange  |  The callback when the input box changes  |  func |  |
+|  onIconClick  |  The callback when the icon button is clicked  |  func |  |

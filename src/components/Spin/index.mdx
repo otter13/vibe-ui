@@ -1,0 +1,47 @@
+---
+name: Spin
+route: /Spin
+order: 10
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Spin from './index'
+
+## Spin
+
+<Playground style={{height: '360px'}}>
+    <Spin />
+</Playground>
+
+## SPIN change color
+
+<Playground style={{height: '360px'}}>
+    <Spin bgColor="orange" />
+</Playground>
+
+## Spin-line(Linear load)
+
+<Playground style={{height: '360px'}}>
+    <Spin type="line" />
+</Playground>
+
+## Basic usage
+
+``` js
+import { Spin } from '@otter13/vibe-ui'
+
+// Import
+<Spin />
+<Spin type="line" />
+<Spin bgColor="orange" />
+```
+
+## API documentation
+|  parameter  |  illustrate  |  type  |  Defaults  |
+|  ---   |  ---  |  ---  |  ---  |
+|  isLoading  |  Load the state, default to TRUE  |  bool  |  |
+|  loadingText  |  Text of loading state  |  string  |  |
+|  hiddenText  |  Whether to hide the text of the loading state  |  bool  |  |
+|  type  |  SPIN type, currently there are two types of Ball and LINE  |  string  |  |
+|  bgColor  |  Load animation color  |  string  |  |

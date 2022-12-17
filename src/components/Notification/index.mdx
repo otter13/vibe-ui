@@ -1,0 +1,179 @@
+---
+name: Notification
+route: /Notification
+order: 8
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import xNotification from './index'
+import Button from '../Button'
+import Icon from '../Icon'
+
+## Notification notification prompt
+
+#### 1.Basic use
+<Playground>
+    <Button onClick={
+        () => {
+            xNotification.pop({
+                message: 'Fun talk about the front -end learning check -in',
+                description: 'The front -end foundation, the intermediate advance'
+            })
+        }
+    }>Default notification information</Button><br />
+    <Button type="primary" onClick={
+        () => {
+            xNotification.pop({
+                type: 'success',
+                message: 'Fun talk about the front -end learning check -in',
+                description: 'The front -end foundation, the intermediate advance'
+            })
+        }
+    }>Successful notice(success)</Button><br />
+    <Button type="pure" onClick={
+        () => {
+            xNotification.pop({
+                type: 'info',
+                message: 'Fun talk about the front -end learning check -in',
+                description: 'The front -end foundation, the intermediate advance'
+            })
+        }
+    }>Information notice(info)</Button><br />
+    <Button type="primary" onClick={
+        () => {
+            xNotification.pop({
+                type: 'warning',
+                message: 'Fun talk about the front -end learning check -in',
+                description: 'The front -end foundation, the intermediate advance'
+            })
+        }
+    }>Warning notification(warning)</Button><br />
+    <Button type="warning" onClick={
+        () => {
+            xNotification.pop({
+                type: 'error',
+                message: 'Fun talk about the front -end learning check -in',
+                description: 'The front -end foundation, the intermediate advance'
+            })
+        }
+    }>Error message notification(error)</Button>
+</Playground>
+
+#### 2.Custom position and icon
+<Playground>
+    <Button onClick={
+        () => {
+            xNotification.config({
+                placement: 'topLeft'
+            })
+            xNotification.pop({
+                message: 'Fun talk about the front -end learning check -in',
+                duration: 0,
+                description: 'The front -end foundation, the intermediate advance'
+            })
+        }
+    }>topLeft</Button><i style={{marginLeft: '16px'}} />
+    <Button type="primary" onClick={
+        () => {
+            xNotification.config({
+                placement: 'topRight'
+            })
+            xNotification.pop({
+                type: 'success',
+                message: 'Fun talk about the front -end learning check -in',
+                description: 'The front -end foundation, the intermediate advance'
+            })
+        }
+    }>topRight</Button><i style={{marginLeft: '16px'}} />
+    <Button type="pure" onClick={
+        () => {
+            xNotification.config({
+                placement: 'bottomLeft'
+            })
+            xNotification.pop({
+                type: 'info',
+                message: 'Fun talk about the front -end learning check -in',
+                description: 'The front -end foundation, the intermediate advance'
+            })
+        }
+    }>bottomLeft</Button><i style={{marginLeft: '16px'}} />
+    <Button type="primary" onClick={
+        () => {
+            xNotification.config({
+                placement: 'bottomRight'
+            })
+            xNotification.pop({
+                type: 'warning',
+                message: 'Fun talk about the front -end learning check -in',
+                duration: 0,
+                description: 'The front -end foundation, the intermediate advance'
+            })
+        }
+    }>bottomRight</Button><i style={{marginLeft: '16px'}} />
+    <Button type="warning" onClick={
+        () => {
+            xNotification.pop({
+                type: 'error',
+                icon: <Icon type="FaRegSadCry" />,
+                message: 'Fun talk about the front -end learning check -in',
+                duration: 0,
+                description: 'The front -end foundation, the intermediate advance'
+            })
+        }
+    }>Modify notification box icon</Button><i style={{marginLeft: '16px'}} />
+    <Button type="warning" onClick={
+        () => {
+            xNotification.destroy()
+        }
+    }>Destroy notification</Button>
+</Playground>
+
+## Use an introduction
+``` js
+import { Notification } from '@otter13/vibe-ui'
+
+// use
+xNotification.pop({
+    type: 'warning',
+    message: 'Fun talk about the front -end learning check -in',
+    duration: 0,
+    description: 'The front -end foundation, the intermediate advance'
+})
+
+// Global configuration
+xNotification.config({
+    placement: 'bottomRight'
+})
+```
+
+ ## API documentation
+
+ ### xNotification Global attribute
+|  Parameter | Description | Type | Default value |
+|  ---   |  ---  |  ---  |  ---  |
+|  bottom  |  When the message pops up from the bottom, the distance from the bottom, the unit pixel  |  number  |  '24px'  |
+|  duration  |  Automatically close the delay in default, the unit seconds  |  number  |  4.5s  |
+|  getContainer  |  HTMLNode Configure the output location of the rendering node  |  () => HTMLNode  |  () => document.body  |
+|  placement  |  Popping position(topLeft/topRight/bottomLeft/bottomRight)  |  string  |   'topRight'  |
+|  top  |  When the message pops up from the top, the position of the top, the unit pixel  |  number  |  '24px'  |
+|  closeIcon  |  Customly closed icon  |  HTMLNode  |    |
+
+### notice attribute
+| Parameters | Description | Type | Default value |
+|  ---   |  ---  |  ---  |  ---  |
+|  type  |  Notification window type('info|success|error|warning'等)  |  string  |  ''  |
+|  btn  |  Custom off button  |  ReactNode  |   |
+|  bottom  |  When the message pops up from the bottom, the distance from the bottom, the unit pixel  |  number  |    |
+|  className  |  Class of custom content  |  string  |    |
+|  description  |  Notice reminder content, must be selected  |  string|ReactNode  |    |
+|  duration  |  default 4.5 Automatically close after seconds, configuration to null Do not turn off automatically  |  number  |  4.5  |
+|  closeIcon  |  Customly closed icon  |  ReactNode  |    |
+|  getContainer  |  Configure the output location of the rendering node  |  HTMLNode  |    |
+|  icon  |  Custom icon  |  ReactNode  |    |
+|  key  |  Current notification unique sign  |  string  |    |
+|  message  |  Notification reminder title, must be selected  |  string|ReactNode  |    |
+|  onClose  |  Click the callback function triggered when the default closing button  |  func  |    |
+|  onClick  |  The callback function triggered when clicking notification  |  func  |    |
+|  top  |  When the message pops up from the top, the position of the top, the unit pixel  |  func  |    |
+

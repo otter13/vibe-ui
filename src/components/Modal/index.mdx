@@ -1,0 +1,74 @@
+---
+name: Modal
+route: /Modal
+order: 8
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Modal from './index'
+
+# Modal
+
+<Playground>
+    <a href="/vibe-ui/Modal">displayPopUpWindow</a>
+    <Modal title="vibe-ui BasicPopUpWindow" visible={true}>
+        <p>iAmAPopUpContent1</p>
+        <p>iAmAPopUpWindowContent</p>
+        <p>iAmAPopUpWindowContent</p>
+        <p>iAmAPopUpWindowContent</p>
+        <Modal title="vibe-ui BasicPopUpWindow" visible={true}>
+            <p>iAmAPopUpContent2</p>
+            <p>iAmAPopUpWindowContent</p>
+            <p>iAmAPopUpWindowContent</p>
+            <p>iAmAPopUpWindowContent</p>
+        </Modal>
+    </Modal>
+</Playground>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+## useAnIntroduction
+``` js
+import { Modal } from '@otter13/vibe-ui'
+
+// use
+<Modal title="vibe-ui BasicPopUpWindow" visible={true}>
+    <p>iAmAPopUpWindowContent</p>
+    <p>iAmAPopUpWindowContent</p>
+    <p>iAmAPopUpWindowContent</p>
+    <p>iAmAPopUpWindowContent</p>
+</Modal>
+```
+
+## API documentation
+| Parameters | Description | Type | Default value |
+|  ---   |  ---  |  ---  |  ---  |
+|  afterClose  |  The callback after the modal is completely closed  |  func  |  |
+|  bodyStyle  |  modal Body's style  |  object  |  |
+|  cancelText  |  Cancel button text  |  string|ReactNode  |  取消  |
+|  centered  |  Middle display MODAL  |  bool  |  false  |
+|  closable  |  Whether to show the closing button in the upper right corner  |  bool  |  true  |
+|  closeIcon  |  Customly closed icon  |  ReactNode  |  |
+|  destroyOnClose  |  Destruction of sub -elements in MODAL when closed  |  bool  |  false  |
+|  footer  |  The bottom content, when the bottom -default button is not required, you can set it to FOOTER={null}  |  func  |  null|ReactNode  |
+|  keyboard  |  Whether the ESC key that supports the keyboard exits  |  bool  |  true  |
+|  mask  |  Whether to show a mask  |  bool  |  true  |
+|  maskclosable  |  Click on whether the mask is allowed to be closed  |  bool  |  true  |
+|  maskStyle  |  Mask style  |  object  |  |
+|  okText  |  Confirm the text of the button  |  string|ReactNode  |  |
+|  title  |  title content  |  func  |  string|ReactNode  |
+|  visible  |  Whether the modal is visible |  bool  |  false  |
+|  width  |  Modal width  |  string  |  '520px'  |
+|  onCancel  |  Click on the mask or cancel button, or the callback of the keyboard ESC button  |  func  |  |
+|  onOk  |  Click OK to call back  |  func  |  |

@@ -1,0 +1,48 @@
+---
+name: Switch
+route: /Switch
+order: 5
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Switch from './index'
+
+# Switch component
+
+#### basic settings
+<Playground>
+    <Switch /> <br /><br />
+    <Switch checked />
+</Playground>
+
+#### Control size
+<Playground>
+    <Switch size="small" /> <br /><br />
+    <Switch /> <br /><br />
+    <Switch size="large" />
+</Playground>
+
+#### Switching text
+<Playground>
+    <Switch onText="开" offText="关" />
+</Playground>
+
+## Basic usage
+
+``` js
+import { Switch } from '@otter13/vibe-ui'
+
+// Import
+<Switch />
+```
+
+## API documentation
+|  Parameter | Description | Type | Default value |
+|  ---   |  ---  |  ---  |  ---  |
+|  onClick  |  Clicks of exposed to the outside world  |  func  |  |
+|  checked  |  Whether it is selected  |  bool  |  false  |
+|  disabled  |  Whether  |  bool  |  false  |
+|  offText  |  Turn off the text  |  string  |  ''  |
+|  onText  |  Text of the state  |  string  |  ''  |
+|  size  |  The size of the component  |  string  |  'default'  |
