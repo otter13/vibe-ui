@@ -35,7 +35,7 @@
     "url": "git+https://github.com/otter13/vibe-ui.git"
   },
   "publishConfig": {
-    "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
+    "@otter13:registry": "https://npm.pkg.github.com"
   },
   "contributors": [
     "JL"
@@ -74,8 +74,5 @@
     "Firefox ESR",
     "> 1%",
     "ie >= 9"
-  ],
-  "publishConfig": {
-    "registry": ""
-  }
+  ]
 }
