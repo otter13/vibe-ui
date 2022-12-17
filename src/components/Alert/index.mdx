@@ -1,0 +1,58 @@
+---
+name: Alert
+route: /Alert
+order: 5
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Alert from './index'
+
+# Alert警告提示组件
+#### 默认
+
+<Playground>
+    <Alert message="温馨提示：您的小票已出，快来火车站获取吧～" />
+</Playground>
+
+#### 可关闭
+
+<Playground>
+    <Alert message="温馨提示：您的小票已出，快来火车站获取吧～" closable />
+</Playground>
+
+#### Theme type
+
+<Playground>
+    <Alert message="Successful tickets: Your small ticket has been issued, come and get it to the train station ~" type="success" />
+    <Alert message="Error issuance error: React error, return to the homepage ~" type="error" />
+    <Alert message="Ticket notice: Your small ticket has been issued, come and get it for the train station ~~" type="info" />
+    <Alert message="Reminder: Your small ticket has been issued, come and get the train station to get it ~" />
+</Playground>
+
+#### Configuration prompt auxiliary text
+
+<Playground>
+    <Alert message="Notice" description="Your small ticket has been out, come to the train station to get it ~~" type="info" />
+    <Alert message="Successful verification" description="Your code is submitted successfully, come to the train station to get it ~~" type="success" closable />
+</Playground>
+
+## usage
+
+``` js
+import { Alert } from '@otter13/vibe-ui'
+
+// Import
+<Alert message="Successful verification" description="Your code is submitted successfully, come to the train station to get it ~~" type="success" closable />
+```
+
+## API文档
+|  parameter  |  illustrate  |  Types of  |  Defaults  |
+|  ---   |  ---  |  ---  |  ---  |
+|  style  |  Change the alert style  |  object  |  |
+|  closable  |  Whether to display the closed button, Do not display by default  |  bool  |  false  |
+|  closeText  |  Custom off button  |  string|reactNode  |  'x'  |
+|  message  |  Warning prompt content  |  string  |    |
+|  description  |  Auxiliary text of warning prompts  |  string  |    |
+|  type  |  Type of warning  |  string  |   'warning' |
+|  onClose  |  Event triggered when closed  |  func  |    |
