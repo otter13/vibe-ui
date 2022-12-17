@@ -11,16 +11,16 @@ const colorArr = {
 }
 
 /**
- * 徽标数组件
- * @param {style} 更改badge样式
- * @param {color} 自定义小圆点的颜色
- * @param {count} 展示的数字
- * @param {dot} 不展示数字,只展示一个小圆点
- * @param {offset} 设置状态点的偏移
- * @param {overflowCount} 展示封顶的数字
- * @param {showZero} 当数值为0时是否展示Badge
- * @param {status} 设置badge为状态点, 类型有success|warning|error|default|processing
- * @param {text} 当设置status时状态点的文本
+ * Logo number component
+ * @param {style} Change the Badge style
+ * @param {color} Custom small dot color
+ * @param {count} Display number
+ * @param {dot} Do not display numbers,Just show one small dot
+ * @param {offset} Set the offset of the status point
+ * @param {overflowCount} Display the number of cap
+ * @param {showZero} Whether the value is 0 when the value is 0
+ * @param {status} Set Badge as the status point, The type has success|warning|error|default|processing
+ * @param {text} Text of the state point when setting when setus
  */
 function Badge(props) {
   const {
