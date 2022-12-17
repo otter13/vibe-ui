@@ -27,15 +27,7 @@ yarn add @otter13/vide-u
 ## 2. Example
 ``` jsx
 import { 
-  Button,
-  Skeleton,
-  Empty,
-  Progress,
-  Tag,
-  Switch,
-  Drawer,
-  Badge,
-  Alert
+  Button
 } from '@otter13/vide-ui'
 import { useState } from 'react'
 import styles from './index.css'
