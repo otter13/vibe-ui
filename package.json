@@ -1,6 +1,6 @@
 {
   "name": "@otter13/vibe-ui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A light-weight UI design language and React components implementation",
   "keywords": [
     "component",
