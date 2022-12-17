@@ -1,0 +1,40 @@
+---
+name: Drawer
+route: /Drawer
+order: 8
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Drawer from './index'
+
+# Drawer drawer component
+
+<Playground>
+    <div>Click X to close in the upper right corner, or click the mask to close</div>
+    <Drawer visible={true} />
+</Playground>
+
+## Basic usage
+
+``` js
+import { Drawer } from '@otter13/vibe-ui'
+
+// Import
+<Drawer />
+```
+
+## API documentation
+|  parameter  |  illustrate  |  Types of  |  Defaults  |
+|  ---   |  ---  |  ---  |  ---  |
+|  visible  |  Whether the drawer is visible  |  bool  |  false  |
+|  closable  |  Whether to display the closed button in the upper right corner  |  bool  |  true  |
+|  destroyOnClose  |  Destroy the sub -element inside when closed  |  bool  |  false  |
+|  getContainer  |  specify Drawer Mounted HTML node, false To mount the current dom  |  HTMLElement  |  document.body  |
+|  maskClosable  |  Click on the mask whether the drawer is allowed to close the drawer  |  bool  |  true  |
+|  mask  |  Whether to show a mask  |  bool  |  true  |
+|  drawerStyle  |  Used to set the drawer to pop up the layer style  |  object  |  |
+|  width  |  Pop -up layer width  |  number|string  |  '300px'  |
+|  zIndex  |  Drawer level  |  number  |  10  |
+|  placement  |  Drawer direction  |  string  |  'right'  |
+|  onClose  |  Click the callback when closed  |  func  |  |

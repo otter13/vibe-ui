@@ -1,0 +1,100 @@
+---
+name: Message
+route: /Message
+order: 8
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import message from './index'
+import Button from '../Button'
+import Icon from '../Icon'
+
+## messageNotificationPrompt
+
+#### 1.basicUse
+<Playground>
+    <Button onClick={
+        () => {
+            message.pop({
+                content: 'funTalkAboutTheFrontEndLearningCheckIn'
+            })
+        }
+    }>defaultNotificationInformation</Button><br />
+    <Button type="primary" onClick={
+        () => {
+            message.pop({
+                type: 'success',
+                content: 'yourRequestIsApproved!',
+                duration: 0
+            })
+        }
+    }>successfulNotice(success)</Button><br />
+    <Button type="pure" onClick={
+        () => {
+            message.pop({
+                type: 'info',
+                content: 'funTalkAboutTheFrontEndLearningCheckIn'
+            })
+        }
+    }>informationNotice(info)</Button><br />
+    <Button type="primary" onClick={
+        () => {
+            message.pop({
+                type: 'warning',
+                content: 'funTalkAboutTheFrontEndLearningCheckIn'
+            })
+        }
+    }>warningNotification(warning)</Button><br />
+    <Button type="warning" onClick={
+        () => {
+            message.pop({
+                type: 'error',
+                content: 'funTalkAboutTheFrontEndLearningCheckIn'
+            })
+        }
+    }>errorMessageNotification(error)</Button>
+</Playground>
+
+## useAnIntroduction
+``` js
+import { message } from '@otter13/vibe-ui'
+
+// use
+message.pop({
+    type: 'warning',
+    content: 'funTalkAboutTheFrontEndLearningCheckIn',
+    duration: 0
+})
+
+// globalConfiguration
+message.config({
+    duration: 6
+})
+```
+
+ ## api Documentation
+
+ ### xMessage's global attribute
+|  parameter  |  illustrate  |  Types of  |  Defaults  |
+|  ---   |  ---  |  ---  |  ---  |
+|  duration  |  Automatically close the delay in default, the unit seconds  |  number  |  4.5s  |
+|  getContainer  |  HTMLNode Configure the output location of the rendering node  |  () => HTMLNode  |  () => document.body  |
+|  closeIcon  |  Customly closed icon  |  HTMLNode  |    |
+
+ ### notice attribute
+|  parameter  |  illustrate  |  Types of  |  Defaults  |
+|  ---   |  ---  |  ---  |  ---  |
+|  type  |  Notification window type('info|success|error|warning'等)  |  string  |  ''  |
+|  btn  |  Custom off button  |  ReactNode  |   |
+|  className  |  Class of custom content  |  string  |    |
+|  duration  |  default 4.5 Automatically close after seconds, configuration to null Do not turn off automatically  |  number  |  4.5  |
+|  closeIcon  |  Customly closed icon  |  ReactNode  |    |
+|  getContainer  |  Configure the output location of the rendering node  |  HTMLNode  |    |
+|  icon  |  Custom icon  |  ReactNode  |    |
+|  key  |  Current notification unique sign  |  string  |    |
+|  content  |  Notification reminder title, must be selected  |  string|ReactNode  |    |
+|  onClose  |  Click the callback function triggered when the default closing button  |  func  |    |
+|  onClick  |  The callback function triggered when clicking notification  |  func  |    |
+|  top  |  When the message pops up from the top, the position of the top, the unit pixel  |  func  |    |
+

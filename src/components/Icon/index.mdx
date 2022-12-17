@@ -1,0 +1,54 @@
+---
+name: Icon
+route: /Icon
+order: 7
+sidebar: true
+---
+
+import { Playground } from 'docz'
+import Icon from './index'
+// let { FaBeer } = Icon
+
+# Icon
+
+### How to introduce and use icon components
+icon icon library The author uses a more famous FONT Awesome， Based on the second packaging, the specific use is as follows:
+<Playground>
+    <Icon type="FaBeer" size="24px" style={{marginLeft: '15px'}} />
+    <Icon type="FaAccessibleIcon" size="24px" style={{marginLeft: '15px'}} />
+    <Icon type="FaAlipay" size="24px" style={{marginLeft: '15px'}} />
+    <Icon type="FaAngellist" size="24px" style={{marginLeft: '15px'}} />
+    <Icon type="FaAtlassian" size="24px" style={{marginLeft: '15px'}} />
+    <Icon type="FaBitbucket" size="24px" style={{marginLeft: '15px'}} />
+    <Icon type="FaDropbox" size="24px" style={{marginLeft: '15px'}} />
+    <Icon type="FaFreebsd" size="24px" style={{marginLeft: '15px'}} />
+    <Icon type="FaGithub" size="24px" style={{marginLeft: '15px'}} />
+    <Icon type="FaHackerNewsSquare" size="24px" style={{marginLeft: '15px'}} />
+    <Icon type="FaHotjar" size="24px" style={{marginLeft: '15px', color: 'red'}} />
+</Playground>
+
+## The basic code is as follows
+``` js
+import { Icon } from '@otter13/vibe-ui'
+
+// use
+<Icon type="FaBeer" />
+<Icon type="FaAccessibleIcon" size="24px" />
+<Icon type="FaAlipay" size="24px" style={{color: 'red'}} />
+```
+
+
+#### More icons can be obtained in the following interface
+<Playground>
+    <iframe width="100%" height="1000px" style={{border: 'none'}} src="https://react-icons.netlify.com/#/icons/fa" />
+</Playground>
+
+## API documentation
+|  parameter  |  illustrate  |  Types of  |  Defaults  |
+|  ---   |  ---  |  ---  |  ---  |
+|  type  |  Icon type  |  string  |  |
+|  size  |  icon size(px，lg，xs)  |  string  |  |
+|  rotation  |  Rotation angle  |  number  |  |
+|  style  |  Icon style  |  object  |  |
+
+
